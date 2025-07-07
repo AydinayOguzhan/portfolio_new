@@ -61,7 +61,7 @@ export default function ProjectsPage() {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-red-600 mb-4">Error Loading Projects</h1>
+          <h1 className="text-2xl font-bold text-red-600 dark:text-red-400 mb-4">Error Loading Projects</h1>
           <p className="text-gray-600 dark:text-gray-400">{error}</p>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function ProjectsPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-4">
           My Projects
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -90,7 +90,7 @@ export default function ProjectsPage() {
             id="category"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {categories.map(category => (
               <option key={category} value={category}>
@@ -108,7 +108,7 @@ export default function ProjectsPage() {
             id="status"
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-[var(--background)] text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {statuses.map(status => (
               <option key={status} value={status}>
@@ -129,11 +129,11 @@ export default function ProjectsPage() {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
+          <div key={project.id} className="bg-[var(--background)] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
             <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative">
               <span className="text-white font-semibold text-lg">{project.title}</span>
               {project.featured && (
-                <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-4 right-4 bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                   Featured
                 </div>
               )}
@@ -142,36 +142,36 @@ export default function ProjectsPage() {
             <div className="p-6">
               <div className="flex items-center justify-between mb-2">
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                  project.category === 'Frontend' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300' :
-                  project.category === 'Backend' ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300' :
-                  'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300'
+                  project.category === 'Frontend' ? 'bg-blue-600 text-white' :
+                  project.category === 'Backend' ? 'bg-green-600 text-white' :
+                  'bg-purple-600 text-white'
                 }`}>
                   {project.category}
                 </span>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                  project.status === 'completed' ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300' :
-                  project.status === 'in_progress' ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300' :
-                  'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300'
+                  project.status === 'completed' ? 'bg-green-600 text-white' :
+                  project.status === 'in_progress' ? 'bg-yellow-600 text-white' :
+                  'bg-[var(--background-tag)] text-[var(--foreground)]'
                 }`}>
                   {project.status === 'in_progress' ? 'In Progress' : project.status.charAt(0).toUpperCase() + project.status.slice(1)}
                 </span>
               </div>
               
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{project.shortDescription}</p>
+              <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">{project.title}</h3>
+              <p className="text-gray-700 dark:text-gray-400 mb-4">{project.shortDescription}</p>
               
-              <div className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+              <div className="text-sm text-gray-700 dark:text-gray-400 mb-4">
                 {formatDate(project.startDate)} - {formatDate(project.endDate)}
               </div>
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.slice(0, 3).map((tech) => (
-                  <span key={tech} className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded text-xs">
+                  <span key={tech} className="bg-[var(--background-tag)] text-[var(--foreground)] px-2 py-1 rounded text-xs">
                     {tech}
                   </span>
                 ))}
                 {project.technologies.length > 3 && (
-                  <span className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 px-2 py-1 rounded text-xs">
+                  <span className="bg-[var(--background-tag)] text-[var(--foreground)] px-2 py-1 rounded text-xs">
                     +{project.technologies.length - 3} more
                   </span>
                 )}
@@ -189,7 +189,7 @@ export default function ProjectsPage() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md text-sm font-medium transition-colors"
                     aria-label="View GitHub repository"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -202,7 +202,7 @@ export default function ProjectsPage() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md text-sm font-medium transition-colors"
                     aria-label="View live demo"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -219,7 +219,7 @@ export default function ProjectsPage() {
       {/* No results message */}
       {filteredProjects.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-500 dark:text-gray-400 text-lg">
+          <p className="text-gray-600 dark:text-gray-400 text-lg">
             No projects found matching your criteria.
           </p>
         </div>
@@ -229,7 +229,7 @@ export default function ProjectsPage() {
       <div className="text-center mt-12">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
+          className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

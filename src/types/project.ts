@@ -12,4 +12,5 @@ export interface Project {
   startDate: string;
   endDate: string | null;
   status: string;
+  features: string[];
 } 

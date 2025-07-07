@@ -15,11 +15,11 @@ export const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-800">
+    <nav className="bg-[var(--background)] text-[var(--foreground)] shadow-sm border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
+          <Link href="/" className="text-xl font-bold text-[var(--foreground)]">
             Oğuzhan Aydınay
           </Link>
 
@@ -32,7 +32,7 @@ export const Navigation: React.FC = () => {
                 className={`text-sm font-medium transition-colors ${
                   pathname === link.href
                     ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    : 'text-[var(--foreground)] hover:text-blue-600 dark:hover:text-blue-400'
                 }`}
               >
                 {link.label}

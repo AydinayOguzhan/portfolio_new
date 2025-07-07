@@ -12,7 +12,15 @@
     "category": "Backend",
     "startDate": "2022-06-01",
     "endDate": "2023-06-30",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "RESTful API with comprehensive documentation",
+      "Multi-database support (PostgreSQL, MongoDB, MySQL)",
+      "Advanced caching with Redis for optimal performance",
+      "Load balancing and scalable architecture",
+      "Docker containerization for easy deployment",
+      "Robust authentication and authorization system"
+    ]
   },
   {
     "id": "5",
@@ -27,7 +35,15 @@
     "category": "Mobile",
     "startDate": "2022-09-01",
     "endDate": "2023-03-15",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Bluetooth Low Energy (BLE) sensor connectivity",
+      "Real-time data visualization with interactive charts",
+      "Sensor calibration and configuration tools",
+      "Cloud synchronization for data backup",
+      "Cross-platform compatibility (iOS & Android)",
+      "Industrial-grade data logging capabilities"
+    ]
   },
   {
     "id": "6",
@@ -42,7 +58,15 @@
     "category": "Full Stack",
     "startDate": "2020-08-01",
     "endDate": "2021-09-30",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Enterprise-grade CRM and inventory management systems",
+      "Business process automation and workflow management",
+      "Azure cloud integration and deployment",
+      "Advanced security and role-based access control",
+      "Modern Angular frontend with responsive design",
+      "Scalable .NET Core backend architecture"
+    ]
   },
   {
     "id": "7",
@@ -57,7 +81,15 @@
     "category": "Full Stack",
     "startDate": "2024-06-01",
     "endDate": "2025-06-30",
-    "status": "in_progress"
+    "status": "in_progress",
+    "features": [
+      "Comprehensive plant cataloging and database management",
+      "Growth tracking with photo documentation",
+      "Automated watering schedules and reminders",
+      "Seasonal planning and crop rotation suggestions",
+      "User-friendly interface for gardeners of all levels",
+      "Weather integration for optimal gardening decisions"
+    ]
   },
   {
     "id": "8",
@@ -72,7 +104,15 @@
     "category": "Frontend",
     "startDate": "2024-05-01",
     "endDate": "2025-05-30",
-    "status": "in_progress"
+    "status": "in_progress",
+    "features": [
+      "Multiple timer modes (Pomodoro, countdown, stopwatch)",
+      "Customizable settings and preferences",
+      "Browser notifications and sound alerts",
+      "Session tracking and productivity analytics",
+      "Clean and intuitive user interface",
+      "Local storage for persistent settings"
+    ]
   },
   {
     "id": "9",
@@ -87,7 +127,15 @@
     "category": "AI/ML",
     "startDate": "2024-06-01",
     "endDate": "2024-07-23",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "AI-powered script generation using OpenAI API",
+      "Natural language processing for topic analysis",
+      "Structured script formatting with timing suggestions",
+      "Scene descriptions and visual cues",
+      "Flask web interface for easy script generation",
+      "Content optimization for different video platforms"
+    ]
   },
   {
     "id": "14",
@@ -102,7 +150,15 @@
     "category": "Full Stack",
     "startDate": "2023-04-01",
     "endDate": "2023-05-21",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Office resource management and allocation",
+      "Employee scheduling and shift management",
+      "Meeting room booking and availability tracking",
+      "IoT integration for smart facility monitoring",
+      "Real-time dashboard with live data updates",
+      "Automated notifications and alerts system"
+    ]
   },
   {
     "id": "15",
@@ -117,7 +173,15 @@
     "category": "IoT",
     "startDate": "2022-07-01",
     "endDate": "2022-08-25",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Multiple sensor types for environmental monitoring",
+      "Real-time data streaming with MQTT protocol",
+      "Cloud integration and data synchronization",
+      "Comprehensive analytics and data visualization",
+      "Scalable architecture for multiple Raspberry Pi devices",
+      "SQLite database for local data storage"
+    ]
   },
   {
     "id": "16",
@@ -132,7 +196,15 @@
     "category": "Frontend",
     "startDate": "2022-04-01",
     "endDate": "2022-05-21",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Personal watchlist management for movies and TV shows",
+      "Personalized recommendations based on viewing history",
+      "Progress tracking for ongoing series",
+      "Rating system and personal reviews",
+      "External API integration for content information",
+      "Material-UI design with responsive layout"
+    ]
   },
   {
     "id": "17",
@@ -147,7 +219,15 @@
     "category": "Desktop",
     "startDate": "2022-09-01",
     "endDate": "2022-10-27",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Business process analysis and optimization tools",
+      "Inefficiency identification and reporting",
+      "Data visualization with interactive charts",
+      "Recommendation engine for process improvements",
+      "Crystal Reports integration for professional reporting",
+      "SQL Server database for data management"
+    ]
   },
   {
     "id": "18",
@@ -162,7 +242,15 @@
     "category": "Backend",
     "startDate": "2022-08-01",
     "endDate": "2022-09-15",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "User management and authentication system",
+      "Course content delivery and management",
+      "Project submission and evaluation system",
+      "Progress tracking and learning analytics",
+      "Automated testing and code review tools",
+      "SignalR integration for real-time communication"
+    ]
   },
   {
     "id": "19",
@@ -177,7 +265,15 @@
     "category": "Testing",
     "startDate": "2022-01-01",
     "endDate": "2022-02-27",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Automated testing scenarios with pytest framework",
+      "Cross-browser compatibility testing",
+      "Performance monitoring and load testing",
+      "Detailed reporting and test result analysis",
+      "CI/CD pipeline integration",
+      "WebDriver management and configuration"
+    ]
   },
   {
     "id": "20",
@@ -192,6 +288,14 @@
     "category": "Full Stack",
     "startDate": "2021-11-01",
     "endDate": "2022-01-05",
-    "status": "completed"
+    "status": "completed",
+    "features": [
+      "Advanced analytics and predictive modeling",
+      "Data visualization with Chart.js integration",
+      "Comprehensive reporting and dashboards",
+      "Historical data analysis and trend identification",
+      "Bootstrap responsive design",
+      "MySQL database for data management"
+    ]
   }
 ] 
