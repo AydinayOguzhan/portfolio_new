@@ -75,7 +75,7 @@ export default function ProjectsPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-4">
           My Projects
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <p className="text-xl text-[var(--foreground)] max-w-2xl mx-auto">
           A collection of projects I&apos;ve worked on, showcasing different technologies and problem-solving approaches
         </p>
       </div>
@@ -158,7 +158,7 @@ export default function ProjectsPage() {
               </div>
               
               <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">{project.title}</h3>
-              <p className="text-gray-700 dark:text-gray-400 mb-4">{project.shortDescription}</p>
+              <p className="text-[var(--foreground)] mb-4">{project.shortDescription}</p>
               
               <div className="text-sm text-gray-700 dark:text-gray-400 mb-4">
                 {formatDate(project.startDate)} - {formatDate(project.endDate)}
@@ -189,7 +189,7 @@ export default function ProjectsPage() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md text-sm font-medium transition-colors"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-[var(--foreground)] rounded-md text-sm font-medium transition-colors"
                     aria-label="View GitHub repository"
                   >
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
