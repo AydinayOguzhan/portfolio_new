@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import projects from '../data/projects.json';
+import ProjectCard from './components/ProjectCard';
 
 export default function Home() {
   const featuredProjects = projects.filter(project => project.featured);
@@ -236,45 +237,7 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project) => (
-            <div key={project.id} className="bg-[var(--background)] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow">
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-semibold text-lg">{project.title}</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">{project.title}</h3>
-                <p className="text-[var(--foreground)] mb-4">{project.shortDescription}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span key={tech} className="bg-[var(--background-tag)] text-[var(--foreground)] px-2 py-1 rounded text-sm">
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="bg-[var(--background-tag)] text-[var(--foreground)] px-2 py-1 rounded text-xs">
-                      +{project.technologies.length - 3} more
-                    </span>
-                  )}
-                </div>
-                <div className="flex gap-2">
-                  <Link
-                    href={`/projects/${project.id}`}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
-                  >
-                    View Details
-                  </Link>
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-[var(--foreground)] px-4 py-2 rounded-md text-sm font-medium transition-colors"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
         
